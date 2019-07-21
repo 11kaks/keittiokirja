@@ -1,0 +1,68 @@
+\ProvidesPackage{keittiotyyli}
+
+
+% Common style file
+% Include this file into your main .tex with \usepackage{keittiotyyli}
+
+% Add comments for yourself.
+\newcommand{\com}[1]{
+	\begin{footnotesize}
+		\textcolor{red} {Comment: {#1}}
+	\end{footnotesize}
+}
+
+% encoding, font, language
+\usepackage[T1]{fontenc}
+% Käytetään utf8x (utf8 ei toimi) niin ääkköset toimii ja reseptit voi olla utf8-koodattuina.
+\usepackage[utf8x]{inputenc}
+\usepackage{lmodern}
+\usepackage[finnish]{babel}
+
+\usepackage{nicefrac}
+
+\usepackage[
+    handwritten,
+    nowarnings,
+    %myconfig
+]
+{xcookybooky}
+
+\usepackage{blindtext}    % only needed for generating test text
+
+% Tällä ilmeisesti rakennetaan asteen merkki. Olkoon näin.
+\DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
+%\DeclareUnicodeCharacter{B0}{\textdegree}
+
+\setcounter{secnumdepth}{1}
+\renewcommand*{\recipesection}[2][]
+{%
+    \subsection[#1]{#2}
+}
+
+\renewcommand{\subsectionmark}[1]
+{% no implementation to display the section name instead
+}
+
+\hbadness=10000	% Ignore underfull boxes
+
+
+\usepackage{subfiles}
+
+\usepackage{hyperref}    % must be the last package
+\hypersetup{%
+    pdfauthor            = {Kimmo Riihiaho},
+    pdftitle             = {Vitu hyvejä reseptejä},
+    pdfsubject           = {Recipes},
+    pdfkeywords          = {example, recipes, cookbook, xcookybooky},
+    pdfstartview         = {FitV},
+    pdfview              = {FitH},
+    pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
+    bookmarksopen        = {true},
+    pdfpagetransition    = {Glitter},
+    colorlinks           = {true},
+    linkcolor            = {black},
+    urlcolor             = {blue},
+    citecolor            = {black},
+    filecolor            = {black},
+}
+% EI MITÄÄN TÄMÄN RIVIN ALAPUOLELLE!!

@@ -1,0 +1,59 @@
+% Magic to get citations work in slave files.
+\makeatletter
+\def\input@path{{../}}
+\makeatother
+\documentclass[../keittiokirja.tex]{subfiles}
+
+%
+% Kaikki yksittäiset reseptit kerätään tällä filulla yhteen nippuun 
+% käyttäen subfile-komentoa. Tämä on myös ainut tiedosto (itse reseptien 
+% lisäksi) joka käyttää xcookybooky-pakettia. Kaikkien muiden pitäisi olla 
+% aika perus Latexia.
+%
+
+\begin{document}
+
+\section{Reseptit}
+\label{sec:reseptit}
+
+Ruuan laittaminen ei ole varsinaisesti vaikeaa. Kokeileminen ja summamutikassa asioiden pannuun mättäminen 
+on parhaimmillaan erittäin hauskaa; pahimmillaankin aikaansaannos on vain syömäkelvotonta mössöä, jonka 
+joutuu heittämään biojätteeseen. Joskus on kuitenkin mukava jos on jotain pientä referenssiä mistä 
+lähteä liikenteeseen: varsinkin jos ruuan laittamisesta ei ole vielä kovin paljon kokemusta.
+
+
+
+% setHeadlines muuttaa otsikointia.
+\setHeadlines
+{% translation
+	% Ainekset
+    inghead = Ainekset,
+    % Valmistusohje
+    prephead = Valmistaminen,
+    % Vinkkiotsikko
+    hinthead = Vinkkuli,
+    % Jos resepti jatkuu useammalle sivulle, tämä tulee vikalle sivulle..
+    continuationhead = viimone sivu tätä reseptiä,
+    % .. ja tämä ekalle sivulle
+    continuationfoot = jatkuupi seuravalla sivulla,
+    % Kelle ruokaa syötetään esim. henkilöä
+    portionvalue = immeistä,
+}
+
+% Defaulttileveys ainesosille on vähän liian kapia. Pidä leveyksien summa alle 
+% ykkösen, jotta jää vähän tilaa väliin.
+\setRecipeLengths{
+preparationwidth=0.5\textwidth,
+ingredientswidth=0.4\textwidth,
+}
+
+\newpage
+\subfile{./tex/reseptit/soba}
+
+\newpage
+\subfile{./tex/reseptit/kaalisoppa}
+
+\newpage
+\subfile{./tex/reseptit/kungpaokana}
+
+\end{document}

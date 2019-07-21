@@ -1,0 +1,22 @@
+*.dvi
+*.aux
+*.pdf
+*.log
+*.toc
+*.lot
+*.lof
+*.bcf
+*.run.xml
+*.bbl
+*.blg
+*.out
+
+# Ignore sync files that are used to navigate between
+# the pdf and the source code.
+**/*.synctex.gz
+
+# Ignore exclude folder which contains directions
+studyPlan/exclude/
+
+# Ignore images as they take lot of space in git.
+pic/
