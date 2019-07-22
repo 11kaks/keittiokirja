@@ -11,6 +11,13 @@
 	\end{footnotesize}
 }
 
+% For determing if we are in draft mode.
+\usepackage{ifdraft}
+
+% For images. Use demo mode if draft so that 
+% the pdf can be compiled without images.
+\usepackage[\ifdraft{demo}{}]{graphicx}
+
 % encoding, font, language
 \usepackage[T1]{fontenc}
 % Käytetään utf8x (utf8 ei toimi) niin ääkköset toimii ja reseptit voi olla utf8-koodattuina.
