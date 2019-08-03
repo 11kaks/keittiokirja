@@ -21,7 +21,8 @@ on parhaimmillaan erittäin hauskaa; pahimmillaankin aikaansaannos on vain syöm
 joutuu heittämään biojätteeseen. Joskus on kuitenkin mukava jos on jotain pientä referenssiä mistä 
 lähteä liikenteeseen: varsinkin jos ruuan laittamisesta ei ole vielä kovin paljon kokemusta.
 
-\clearpage
+% Tämä korjaa vähän viittauksia ja ne menee melkein oikeelle sivulle. Ilmeisesti tuo book-tyyppi hajotaa.
+\phantomsection
 
 % setHeadlines muuttaa otsikointia.
 \setHeadlines
@@ -53,8 +54,10 @@ ingredientswidth=0.5\textwidth,
 % ei uutta sivua koska tämä on variaatio edellisestä
 \subfile{./tex/reseptit/currypata}
 
+
 \newpage
 \subfile{./tex/reseptit/bataattisosekeitto}
+
 
 \newpage
 \subfile{./tex/reseptit/soba}
