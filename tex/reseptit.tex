@@ -11,6 +11,7 @@
 % aika perus Latexia.
 %
 
+
 \begin{document}
 
 \chapter{Reseptit}
@@ -48,26 +49,15 @@ preparationwidth=0.4\textwidth,
 ingredientswidth=0.5\textwidth,
 }
 
-% Ainekset on reagenssit synteesissä.
-\setHeadlines
-{% translation
-	% Ainekset
-    inghead = Reagenssit,
-    % Valmistusohje
-    prephead = Synteesiohje
-}
+\newpage
+\subfile{./tex/reseptit/wokwalk}
 
+% Ainekset on reagenssit synteesissä.
+\setHeadlines{inghead = Reagenssit,prephead = Synteesiohje}
 \newpage
 \subfile{./tex/reseptit/kanasynteesi}
-
 % Vaihda takaisin
-\setHeadlines
-{% translation
-	% Ainekset
-    inghead = Ainekset,
-    % Valmistusohje
-    prephead = Valmistaminen
-}
+\setHeadlines{inghead = Ainekset,prephead = Valmistaminen}
 
 \newpage
 \subfile{./tex/reseptit/kanaahoisin}
